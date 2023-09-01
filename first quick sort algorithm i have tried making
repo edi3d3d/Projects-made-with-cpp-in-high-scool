@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+void swap(int &a, int &b)
+{
+    int aux=a;
+    a=b;
+    b=aux;
+}
+void qs(int s, int d, int v[])
+{
+    if(s>=d) return ;
+    int small=s-1;
+    for(int i=s; i<d; i++)
+        if(v[i]<v[d])
+        {
+            small++;
+            if(small!=i) swap(v[small], v[i]);
+        }
+    swap(v[d], v[small+1]);
+    
+    qs(s,small, v);
+    qs(small+2, d, v);
+}
+void quicksort(int n, int v[])
+{
+    qs(1,n,v);
+}
+int main()
+{
+    int n, v[30];
+    cin>>n;
+    
+    for(int i=1;i<=n;i++)
+        cin>>v[i];
+        
+    quicksort(n,v);
+    
+    for(int i=1;i<=n;i++)
+        cout<<v[i]<<" ";
+        
+    return 0;
+}
+
+
+
+
