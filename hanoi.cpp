@@ -3,7 +3,7 @@
 #include <string.h>
 #include <fstream>
 using namespace std;
-ifstream f ("date.in");  //on each line there must be a move (a letter from "a" to "c", a space and another letter from a to c) you can use the hanoi solver (hanoi_solver.cpp) to get the letters, the last letter has to be a "p" so it will end)
+ifstream f ("date.in");  //on each line there must be a move (a letter from "a" to "c", a space and another letter from a to c) you can use the hanoi solver (hanoi_solver.cpp (will add it soon)) to get the letters, the last letter has to be a "p" so it will end)
 void swap(char s[], char s1[])
 {
     char str[100];
