@@ -93,7 +93,7 @@ int minimax(char a[5][5], int depth, int jucator, bool maximizer)
                         return win_minimax;
                     }
                 }
-        if(maximizer==true) return max;        //futu-ti mor-ti ma-ti
+        if(maximizer==true) return max;
         else return min;
     }
     else return castig_minimax(a, depth, maximizer);
